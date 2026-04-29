@@ -34,6 +34,8 @@ type UI = {
   securliTitle: string;
   securliIntro: string;
   securliContact: string;
+  contactCtaTitle: string;
+  contactCtaBody: string;
   securliRecs: { title: string; body: string }[];
   tiers: {
     [key: string]: {
@@ -88,11 +90,11 @@ const en: UI = {
   heroTitle1: "Is Your Business",
   heroTitle2: "Exposed?",
   heroDesc:
-    "A 43-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
+    "A 39-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
   start: "Start the Assessment",
   features: [
     { title: "Confidential", desc: "Nothing is sent or stored. Your answers stay in your browser." },
-    { title: "Honest scoring", desc: "Out of 215 points across 6 critical domains." },
+    { title: "Honest scoring", desc: "Out of 195 points across 6 critical domains." },
     { title: "Actionable", desc: "Get tailored recommendations based on your posture." },
   ],
   back: "Back",
@@ -134,7 +136,7 @@ const en: UI = {
     f2: "Does your organization collect or store regulated data such as PII, PCI, PHI, or other sensitive/proprietary information?",
     f3: "Have you assessed, identified, and documented what you consider to be your most valuable data or IT systems?",
     f4: "Do you have a formalized process for receiving and applying intelligence about updates, patches, or known phishing scams?",
-    t1: "Do you routinely update and patch your systems and applications?",
+    
     t2: "Do individuals or third-party organizations/vendors/SaaS have access to your network?",
     t3: "Are you able to identify all distributed endpoints (servers, desktops, laptops, smartphones, tablets) and check for rogue assets?",
     t4: "Are you able to verify that anti-malware services are installed, running, and up to date on all endpoints, and auto-correct compliance issues?",
@@ -154,16 +156,18 @@ const en: UI = {
     s7: "Does your company use a DNS Firewall?",
     s8: "Are computer operating systems updated regularly?",
     s9: "Are software and system patches applied regularly?",
-    s10: "Is anti-virus software installed and run for regular scans?",
+    
     s11: "Do you use a SIEM to monitor internal network security information?",
-    s12: "Do you regularly conduct Penetration Testing?",
+    
     s13: "Do you perform security scanning and configuration based on CIS standards?",
-    s14: "Do you regularly conduct staff security awareness education?",
+    
     s15: "Do you think your company's current cybersecurity protection measures are sufficient?",
   },
   securliTitle: "Expert Recommendations",
   securliIntro: "Regardless of your score, these are the foundational practices every organization should adopt to improve cyber resilience:",
-  securliContact: "Interested in these services? Email info@securli.com",
+  securliContact: "Interested in these services? Email info@10gtechnology.com",
+  contactCtaTitle: "Need More Help?",
+  contactCtaBody: "For more cyber security services or information, please contact us at info@10gtechnology.com — our team is happy to help.",
   securliRecs: [
     {
       title: "Conduct Penetration Testing at least once a year",
