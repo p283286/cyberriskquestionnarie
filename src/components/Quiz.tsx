@@ -129,7 +129,7 @@ function Intro({ onStart }: { onStart: () => void }) {
       <div className="max-w-3xl text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium text-muted-foreground mb-8 backdrop-blur">
           <Lock className="h-3.5 w-3.5 text-primary" />
-          Information Security & Risk Outlook
+          Cyber Risk Questionnarie
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
