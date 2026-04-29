@@ -311,6 +311,20 @@ function Result({
           </div>
         </div>
 
+        <div className="rounded-2xl border border-border bg-[var(--gradient-card)] p-6 md:p-8 mb-8">
+          <h3 className="font-display text-xl font-semibold mb-2">{t.securliTitle}</h3>
+          <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{t.securliIntro}</p>
+          <div className="space-y-5">
+            {t.securliRecs.map((d, i) => (
+              <div key={i} className="border-l-2 border-accent/60 pl-4">
+                <h4 className="font-semibold mb-1.5">{d.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{d.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-5">{t.securliContact}</p>
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button
             onClick={() => generateReport(score, answers)}

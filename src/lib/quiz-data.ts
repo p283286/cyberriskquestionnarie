@@ -2,7 +2,7 @@ export type Option = { label: string; value: number };
 export type Question = { id: string; text: string; options: Option[] };
 export type Section = { title: string; questions: Question[] };
 
-export const TOTAL_POINTS = 140;
+export const TOTAL_POINTS = 215;
 
 export const sections: Section[] = [
   {
@@ -262,6 +262,149 @@ export const sections: Section[] = [
       },
     ],
   },
+  {
+    title: "Security Awareness & Practices",
+    questions: [
+      {
+        id: "s1",
+        text: "Do you understand the cybersecurity policies and requirements set by the Hong Kong government for various industries?",
+        options: [
+          { label: "Fully understand", value: 5 },
+          { label: "Basic understanding", value: 3 },
+          { label: "Limited understanding", value: 1 },
+          { label: "No understanding", value: 0 },
+        ],
+      },
+      {
+        id: "s2",
+        text: "Are you aware of any cybersecurity standards?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+        ],
+      },
+      {
+        id: "s3",
+        text: "How many of these security frameworks/standards have you heard of? (NIST, CIS, PCI-DSS, GDPR, ISO/IEC 27001, HIPAA, FISMA)",
+        options: [
+          { label: "All or most", value: 5 },
+          { label: "Some", value: 3 },
+          { label: "A few", value: 1 },
+          { label: "None", value: 0 },
+        ],
+      },
+      {
+        id: "s4",
+        text: "Do you encounter suspicious network activity, phishing emails, or security risks at work?",
+        options: [
+          { label: "Often (and recognize them)", value: 5 },
+          { label: "Occasionally", value: 3 },
+          { label: "Rarely", value: 2 },
+          { label: "Never", value: 0 },
+        ],
+      },
+      {
+        id: "s5",
+        text: "Does your company have a firewall in place?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s6",
+        text: "Is the firewall configuration adequate?",
+        options: [
+          { label: "Adequate", value: 5 },
+          { label: "Needs improvement", value: 2 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s7",
+        text: "Does your company use a DNS Firewall?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s8",
+        text: "Are computer operating systems updated regularly?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s9",
+        text: "Are software and system patches applied regularly?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s10",
+        text: "Is anti-virus software installed and run for regular scans?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s11",
+        text: "Do you use a SIEM to monitor internal network security information?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s12",
+        text: "Do you regularly conduct Penetration Testing?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s13",
+        text: "Do you perform security scanning and configuration based on CIS standards?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s14",
+        text: "Do you regularly conduct staff security awareness education?",
+        options: [
+          { label: "Yes", value: 5 },
+          { label: "No", value: 0 },
+          { label: "Don't Know", value: 0 },
+        ],
+      },
+      {
+        id: "s15",
+        text: "Do you think your company's current cybersecurity protection measures are sufficient?",
+        options: [
+          { label: "Very sufficient", value: 5 },
+          { label: "Basically sufficient", value: 3 },
+          { label: "Needs strengthening", value: 1 },
+          { label: "Very insufficient", value: 0 },
+        ],
+      },
+    ],
+  },
 ];
 
 export const allQuestions: Question[] = sections.flatMap((s) =>
@@ -269,7 +412,7 @@ export const allQuestions: Question[] = sections.flatMap((s) =>
 );
 
 export function getResultTier(score: number) {
-  if (score < 75) {
+  if (score < 115) {
     return {
       tier: "Attention Required",
       level: "high-risk",
@@ -283,7 +426,7 @@ export function getResultTier(score: number) {
       ],
     };
   }
-  if (score <= 112) {
+  if (score <= 172) {
     return {
       tier: "Room for Improvement",
       level: "moderate",

@@ -31,6 +31,10 @@ type UI = {
   sectionTitles: Record<string, string>;
   optionLabels: Record<string, string>;
   questions: Record<string, string>;
+  securliTitle: string;
+  securliIntro: string;
+  securliContact: string;
+  securliRecs: { title: string; body: string }[];
   tiers: {
     [key: string]: {
       tier: string;
@@ -60,6 +64,23 @@ const optionKeys = {
   Average: "Average",
   "Not Very": "Not Very",
   "Not at all": "Not at all",
+  "Fully understand": "Fully understand",
+  "Basic understanding": "Basic understanding",
+  "Limited understanding": "Limited understanding",
+  "No understanding": "No understanding",
+  "All or most": "All or most",
+  "A few": "A few",
+  None: "None",
+  "Often (and recognize them)": "Often (and recognize them)",
+  Occasionally: "Occasionally",
+  Rarely: "Rarely",
+  Never: "Never",
+  Adequate: "Adequate",
+  "Needs improvement": "Needs improvement",
+  "Very sufficient": "Very sufficient",
+  "Basically sufficient": "Basically sufficient",
+  "Needs strengthening": "Needs strengthening",
+  "Very insufficient": "Very insufficient",
 };
 
 const en: UI = {
@@ -67,11 +88,11 @@ const en: UI = {
   heroTitle1: "Is Your Business",
   heroTitle2: "Exposed?",
   heroDesc:
-    "A 28-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
+    "A 43-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
   start: "Start the Assessment",
   features: [
     { title: "Confidential", desc: "Nothing is sent or stored. Your answers stay in your browser." },
-    { title: "Honest scoring", desc: "Out of 140 points across 5 critical domains." },
+    { title: "Honest scoring", desc: "Out of 215 points across 6 critical domains." },
     { title: "Actionable", desc: "Get tailored recommendations based on your posture." },
   ],
   back: "Back",
@@ -94,6 +115,7 @@ const en: UI = {
     "Technical & Physical": "Technical & Physical",
     "Assessments & Testing": "Assessments & Testing",
     "Communications & Training": "Communications & Training",
+    "Security Awareness & Practices": "Security Awareness & Practices",
   },
   optionLabels: optionKeys,
   questions: {
@@ -123,7 +145,43 @@ const en: UI = {
     c2: "Are you offering ongoing employee information security training to ALL employees?",
     c3: "Does your board of directors (or senior management) receive information on cybersecurity risk?",
     c4: "Does your board (or senior management) understand and agree that the measures in place to address risk are in line with your risk appetite?",
+    s1: "Do you understand the cybersecurity policies and requirements set by the Hong Kong government for various industries?",
+    s2: "Are you aware of any cybersecurity standards?",
+    s3: "How many of these security frameworks/standards have you heard of? (NIST, CIS, PCI-DSS, GDPR, ISO/IEC 27001, HIPAA, FISMA)",
+    s4: "Do you encounter suspicious network activity, phishing emails, or security risks at work?",
+    s5: "Does your company have a firewall in place?",
+    s6: "Is the firewall configuration adequate?",
+    s7: "Does your company use a DNS Firewall?",
+    s8: "Are computer operating systems updated regularly?",
+    s9: "Are software and system patches applied regularly?",
+    s10: "Is anti-virus software installed and run for regular scans?",
+    s11: "Do you use a SIEM to monitor internal network security information?",
+    s12: "Do you regularly conduct Penetration Testing?",
+    s13: "Do you perform security scanning and configuration based on CIS standards?",
+    s14: "Do you regularly conduct staff security awareness education?",
+    s15: "Do you think your company's current cybersecurity protection measures are sufficient?",
   },
+  securliTitle: "Expert Recommendations",
+  securliIntro: "Regardless of your score, these are the foundational practices every organization should adopt to improve cyber resilience:",
+  securliContact: "Interested in these services? Email info@securli.com",
+  securliRecs: [
+    {
+      title: "Conduct Penetration Testing at least once a year",
+      body: "Penetration Testing simulates a real attacker who has gained access to your environment, revealing what damage could be done so you can patch the gaps. This is NOT the same as vulnerability scanning — only penetration testing uncovers true exploitable weaknesses inside your organization.",
+    },
+    {
+      title: "Conduct a Configuration Assessment at least once a year",
+      body: "A Configuration Assessment evaluates whether your systems and devices are configured according to security baselines. It collects detailed configuration data, compares it against industry standards, identifies risks, and produces a remediation plan — a critical step toward effective cyber risk management.",
+    },
+    {
+      title: "Run Staff Awareness Education at least once a year",
+      body: "Staff Awareness Education trains employees to recognize and respond to cyber threats. It covers common attack techniques, safe handling of sensitive data, strong password practices, and phishing recognition — reducing the risk of human error, which is one of the leading causes of breaches.",
+    },
+    {
+      title: "Use a DNS Firewall to control employee web activity",
+      body: "A DNS Firewall blocks known malicious domains and IP addresses, defends against emerging threats with dynamic blocklists, restricts non-work-related sites, logs network activity for auditing, and reduces your external attack surface — improving overall cybersecurity posture.",
+    },
+  ],
   tiers: {
     "high-risk": {
       tier: "Attention Required",
@@ -256,11 +314,11 @@ const zh: UI = {
   heroTitle1: "您的企业",
   heroTitle2: "是否暴露在风险中?",
   heroDesc:
-    "一份包含 28 个问题的自我评估,用于衡量贵组织的数据脆弱性。专为非技术高管设计。保密。约需 5 分钟。",
+    "一份包含 43 个问题的自我评估,用于衡量贵组织的数据脆弱性。专为非技术高管设计。保密。约需 5 分钟。",
   start: "开始评估",
   features: [
     { title: "保密", desc: "数据不会发送或存储。您的答案仅保留在您的浏览器中。" },
-    { title: "客观评分", desc: "5 个关键领域共 140 分。" },
+    { title: "客观评分", desc: "6 个关键领域共 215 分。" },
     { title: "可行建议", desc: "根据您的安全态势获取量身定制的建议。" },
   ],
   back: "上一题",
@@ -283,6 +341,7 @@ const zh: UI = {
     "Technical & Physical": "技术与物理",
     "Assessments & Testing": "评估与测试",
     "Communications & Training": "沟通与培训",
+    "Security Awareness & Practices": "安全意识与实践",
   },
   optionLabels: {
     Yes: "是",
@@ -302,6 +361,23 @@ const zh: UI = {
     Average: "一般",
     "Not Very": "不太",
     "Not at all": "完全不",
+    "Fully understand": "完全了解",
+    "Basic understanding": "基本了解",
+    "Limited understanding": "不太了解",
+    "No understanding": "完全不了解",
+    "All or most": "全部或大部分",
+    "A few": "少数",
+    None: "无",
+    "Often (and recognize them)": "经常(且能识别)",
+    Occasionally: "偶尔",
+    Rarely: "很少",
+    Never: "从未",
+    Adequate: "完善",
+    "Needs improvement": "尚需改进",
+    "Very sufficient": "非常足够",
+    "Basically sufficient": "基本足够",
+    "Needs strengthening": "有待加强",
+    "Very insufficient": "非常不足",
   },
   questions: {
     p1: "贵组织是否有非 IT 人员或团队负责网络安全?",
@@ -330,7 +406,43 @@ const zh: UI = {
     c2: "您是否为所有员工提供持续的信息安全培训?",
     c3: "您的董事会(或高级管理层)是否收到有关网络安全风险的信息?",
     c4: "董事会(或高级管理层)是否理解并同意应对风险的措施符合您的风险偏好?",
+    s1: "您了解香港政府对各类行业的网络安全政策和相关要求吗?",
+    s2: "您知道有哪些网络安全标准吗?",
+    s3: "以下安全规范/标准您听过几个?(NIST、CIS、PCI-DSS、GDPR、ISO/IEC 27001、HIPAA、FISMA)",
+    s4: "您平时在工作中有遇到可疑的网络活动、钓鱼电邮或安全隐患吗?",
+    s5: "公司有没有部署防火墙?",
+    s6: "防火墙的设定是否完善?",
+    s7: "公司有没有使用 DNS 防火墙(DNS Firewall)?",
+    s8: "电脑作业系统是否定期更新?",
+    s9: "软件及系统补丁是否定期更新?",
+    s10: "是否已安装防毒软件并进行定期扫描?",
+    s11: "是否使用 SIEM 来监控公司内部网络安全信息?",
+    s12: "是否定期进行渗透测试(Penetration Testing)?",
+    s13: "是否根据 CIS 标准对电脑系统进行安全扫描和设定?",
+    s14: "是否定期对员工进行安全意识教育?",
+    s15: "您认为公司目前的网络安全防护措施是否足够?",
   },
+  securliTitle: "专家建议",
+  securliIntro: "无论您的得分如何,以下是每个组织都应采用的基础实践,以提升网络安全韧性:",
+  securliContact: "如对以上服务有兴趣,欢迎电邮至 info@securli.com",
+  securliRecs: [
+    {
+      title: "至少每年进行一次渗透测试 (Penetration Testing)",
+      body: "渗透测试模拟真实黑客进入贵公司后可能发动的攻击,然后根据报告修补漏洞。请注意!渗透测试不是漏洞扫描(Vulnerability Scanning),漏洞扫描所能发现的有限,只有渗透测试才能真正发现公司内的真实漏洞。",
+    },
+    {
+      title: "至少每年进行一次配置评估 (Configuration Assessment)",
+      body: "配置评估用于评估系统或设备的配置是否符合预定标准,包括收集详细配置信息、与安全标准对比分析、识别潜在风险、生成评估报告并制定修复计划。它能帮助组织全面了解 IT 安全状况,是有效网络安全管理的重要步骤。",
+    },
+    {
+      title: "至少每年进行一次员工安全意识教育 (Staff Awareness Education)",
+      body: "员工安全意识教育通过培训提升员工对网络安全风险的认知和应对能力,包括常见攻击手法、辨别恶意行为的技巧、强密码设置和敏感数据处理等。它有助于降低员工成为攻击目标的风险,增强整个组织的资讯安全防护能力。",
+    },
+    {
+      title: "使用 DNS Firewall 限制员工上网行为",
+      body: "DNS Firewall 可阻挡已知恶意域名和 IP、防范新兴威胁、限制非工作相关网站、提供网络使用日志以便审计,并减轻外部攻击面,从而提高整体网络安全性。",
+    },
+  ],
   tiers: {
     "high-risk": {
       tier: "需要关注",
@@ -397,11 +509,11 @@ const ja: UI = {
   heroTitle1: "あなたのビジネスは",
   heroTitle2: "リスクにさらされていますか?",
   heroDesc:
-    "組織のデータ脆弱性を評価するための28問のセルフアセスメント。技術者でない経営層向けに設計。機密保持。所要時間は約5分。",
+    "組織のデータ脆弱性を評価するための43問のセルフアセスメント。技術者でない経営層向けに設計。機密保持。所要時間は約5分。",
   start: "アセスメントを開始",
   features: [
     { title: "機密性", desc: "データは送信も保存もされません。回答はブラウザ内に留まります。" },
-    { title: "公正な採点", desc: "5つの重要領域、合計140点。" },
+    { title: "公正な採点", desc: "6つの重要領域、合計215点。" },
     { title: "実行可能な助言", desc: "セキュリティ態勢に応じた具体的な推奨事項を提供。" },
   ],
   back: "戻る",
@@ -424,6 +536,7 @@ const ja: UI = {
     "Technical & Physical": "技術と物理",
     "Assessments & Testing": "評価とテスト",
     "Communications & Training": "コミュニケーションと教育",
+    "Security Awareness & Practices": "セキュリティ意識と実践",
   },
   optionLabels: {
     Yes: "はい",
@@ -443,6 +556,23 @@ const ja: UI = {
     Average: "平均的",
     "Not Very": "あまり",
     "Not at all": "全く",
+    "Fully understand": "十分に理解",
+    "Basic understanding": "基本的に理解",
+    "Limited understanding": "あまり理解していない",
+    "No understanding": "全く理解していない",
+    "All or most": "すべてまたは大部分",
+    "A few": "いくつか",
+    None: "なし",
+    "Often (and recognize them)": "よくある(認識できる)",
+    Occasionally: "時々",
+    Rarely: "まれに",
+    Never: "全くない",
+    Adequate: "十分",
+    "Needs improvement": "改善が必要",
+    "Very sufficient": "非常に十分",
+    "Basically sufficient": "基本的に十分",
+    "Needs strengthening": "強化が必要",
+    "Very insufficient": "非常に不十分",
   },
   questions: {
     p1: "組織のサイバーセキュリティを担当する非IT担当者またはチームはいますか?",
@@ -471,7 +601,43 @@ const ja: UI = {
     c2: "全従業員に対し継続的な情報セキュリティ教育を提供していますか?",
     c3: "取締役会(または上級管理職)はサイバーセキュリティリスクに関する情報を受け取っていますか?",
     c4: "取締役会(または上級管理職)はリスク対応策がリスク許容度と整合していることを理解・同意していますか?",
+    s1: "香港政府が各業界に対して定めるサイバーセキュリティ政策と要件を理解していますか?",
+    s2: "サイバーセキュリティの基準を知っていますか?",
+    s3: "次のセキュリティ基準のうち、いくつご存じですか?(NIST、CIS、PCI-DSS、GDPR、ISO/IEC 27001、HIPAA、FISMA)",
+    s4: "業務中に不審なネットワーク活動、フィッシングメール、セキュリティリスクに遭遇しますか?",
+    s5: "貴社にはファイアウォールが導入されていますか?",
+    s6: "ファイアウォールの設定は適切ですか?",
+    s7: "貴社では DNS ファイアウォールを使用していますか?",
+    s8: "コンピュータの OS は定期的に更新されていますか?",
+    s9: "ソフトウェアとシステムのパッチは定期的に適用されていますか?",
+    s10: "ウイルス対策ソフトをインストールし定期的にスキャンしていますか?",
+    s11: "社内ネットワークのセキュリティ情報を監視するために SIEM を使用していますか?",
+    s12: "ペネトレーションテストを定期的に実施していますか?",
+    s13: "CIS 基準に基づいてシステムのセキュリティスキャンと設定を行っていますか?",
+    s14: "従業員へのセキュリティ意識教育を定期的に行っていますか?",
+    s15: "現在の貴社のサイバーセキュリティ対策は十分だと思いますか?",
   },
+  securliTitle: "専門家からの推奨事項",
+  securliIntro: "スコアにかかわらず、サイバーレジリエンスを高めるためにすべての組織が採用すべき基本的な実践事項です:",
+  securliContact: "上記のサービスにご興味があれば info@securli.com までメールください",
+  securliRecs: [
+    {
+      title: "少なくとも年に一度ペネトレーションテストを実施",
+      body: "ペネトレーションテストは実際の攻撃者が侵入した状況をシミュレートし、どのような被害が生じうるかを明らかにし、報告書に基づき脆弱性を修正します。脆弱性スキャンとは異なり、本当のリスクはペネトレーションテストでしか発見できません。",
+    },
+    {
+      title: "少なくとも年に一度コンフィグレーション評価を実施",
+      body: "コンフィグレーション評価はシステムや機器の設定が基準に適合しているかを評価します。詳細な構成情報を収集し、業界標準と比較、リスクを特定し、修復計画を作成します。効果的なサイバーリスク管理のための重要なステップです。",
+    },
+    {
+      title: "少なくとも年に一度従業員のセキュリティ意識教育を実施",
+      body: "従業員教育は、攻撃手法の理解、機密データの取扱い、強いパスワードの設定、フィッシングの識別など、サイバー脅威への対応力を高めます。人的要因による事故リスクの低減に不可欠です。",
+    },
+    {
+      title: "DNS ファイアウォールで従業員のウェブ利用を制御",
+      body: "DNS ファイアウォールは既知の悪意あるドメインや IP をブロックし、新たな脅威を動的ブロックリストで防御、業務外サイトを制限、ログ記録による監査を可能にし、外部攻撃面を縮小します。",
+    },
+  ],
   tiers: {
     "high-risk": {
       tier: "要対応",
