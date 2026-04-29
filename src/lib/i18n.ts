@@ -23,6 +23,9 @@ type UI = {
   recommendedActions: string;
   detailedRecommendations: string;
   retake: string;
+  downloadReport: string;
+  reportTitle: string;
+  reportGenerated: string;
   disclaimer: string;
   language: string;
   sectionTitles: Record<string, string>;
@@ -79,6 +82,9 @@ const en: UI = {
   recommendedActions: "Recommended Actions",
   detailedRecommendations: "Detailed Recommendations",
   retake: "Retake Assessment",
+  downloadReport: "Download PDF Report",
+  reportTitle: "Cyber Risk Assessment Report",
+  reportGenerated: "Generated",
   disclaimer:
     "Disclaimer: This information is for general awareness only and does not constitute professional security advice. Consult with qualified professionals for tailored recommendations.",
   language: "Language",
@@ -265,6 +271,9 @@ const zh: UI = {
   recommendedActions: "建议行动",
   detailedRecommendations: "详细建议",
   retake: "重新测试",
+  downloadReport: "下载 PDF 报告",
+  reportTitle: "网络风险评估报告",
+  reportGenerated: "生成时间",
   disclaimer:
     "免责声明:本信息仅供一般了解,不构成专业安全建议。请咨询合格的专业人员以获取量身定制的建议。",
   language: "语言",
@@ -403,6 +412,9 @@ const ja: UI = {
   recommendedActions: "推奨アクション",
   detailedRecommendations: "詳細な推奨事項",
   retake: "もう一度受ける",
+  downloadReport: "PDFレポートをダウンロード",
+  reportTitle: "サイバーリスク評価レポート",
+  reportGenerated: "生成日時",
   disclaimer:
     "免責事項:本情報は一般的な認識のためのみであり、専門的なセキュリティ助言を構成するものではありません。個別の推奨事項については資格のある専門家にご相談ください。",
   language: "言語",
