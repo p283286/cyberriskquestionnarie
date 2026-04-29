@@ -31,6 +31,10 @@ type UI = {
   sectionTitles: Record<string, string>;
   optionLabels: Record<string, string>;
   questions: Record<string, string>;
+  securliTitle: string;
+  securliIntro: string;
+  securliContact: string;
+  securliRecs: { title: string; body: string }[];
   tiers: {
     [key: string]: {
       tier: string;
