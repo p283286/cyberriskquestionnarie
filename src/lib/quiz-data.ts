@@ -2,7 +2,7 @@ export type Option = { label: string; value: number };
 export type Question = { id: string; text: string; options: Option[] };
 export type Section = { title: string; questions: Question[] };
 
-export const TOTAL_POINTS = 215;
+export const TOTAL_POINTS = 195;
 
 export const sections: Section[] = [
   {
@@ -150,14 +150,6 @@ export const sections: Section[] = [
   {
     title: "Technical & Physical",
     questions: [
-      {
-        id: "t1",
-        text: "Do you routinely update and patch your systems and applications?",
-        options: [
-          { label: "Yes", value: 5 },
-          { label: "No", value: 0 },
-        ],
-      },
       {
         id: "t2",
         text: "Do individuals or third-party organizations/vendors/SaaS have access to your network?",
@@ -349,15 +341,6 @@ export const sections: Section[] = [
         ],
       },
       {
-        id: "s10",
-        text: "Is anti-virus software installed and run for regular scans?",
-        options: [
-          { label: "Yes", value: 5 },
-          { label: "No", value: 0 },
-          { label: "Don't Know", value: 0 },
-        ],
-      },
-      {
         id: "s11",
         text: "Do you use a SIEM to monitor internal network security information?",
         options: [
@@ -367,26 +350,8 @@ export const sections: Section[] = [
         ],
       },
       {
-        id: "s12",
-        text: "Do you regularly conduct Penetration Testing?",
-        options: [
-          { label: "Yes", value: 5 },
-          { label: "No", value: 0 },
-          { label: "Don't Know", value: 0 },
-        ],
-      },
-      {
         id: "s13",
         text: "Do you perform security scanning and configuration based on CIS standards?",
-        options: [
-          { label: "Yes", value: 5 },
-          { label: "No", value: 0 },
-          { label: "Don't Know", value: 0 },
-        ],
-      },
-      {
-        id: "s14",
-        text: "Do you regularly conduct staff security awareness education?",
         options: [
           { label: "Yes", value: 5 },
           { label: "No", value: 0 },
@@ -412,7 +377,7 @@ export const allQuestions: Question[] = sections.flatMap((s) =>
 );
 
 export function getResultTier(score: number) {
-  if (score < 115) {
+  if (score < 104) {
     return {
       tier: "Attention Required",
       level: "high-risk",
@@ -426,7 +391,7 @@ export function getResultTier(score: number) {
       ],
     };
   }
-  if (score <= 172) {
+  if (score <= 156) {
     return {
       tier: "Room for Improvement",
       level: "moderate",
