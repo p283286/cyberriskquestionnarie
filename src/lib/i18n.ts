@@ -271,6 +271,9 @@ const zh: UI = {
   recommendedActions: "建议行动",
   detailedRecommendations: "详细建议",
   retake: "重新测试",
+  downloadReport: "下载 PDF 报告",
+  reportTitle: "网络风险评估报告",
+  reportGenerated: "生成时间",
   disclaimer:
     "免责声明:本信息仅供一般了解,不构成专业安全建议。请咨询合格的专业人员以获取量身定制的建议。",
   language: "语言",
