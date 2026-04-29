@@ -312,6 +312,13 @@ function Result({
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Button
+            onClick={() => generateReport(score, answers)}
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+          >
+            <Download className="mr-2 h-4 w-4" /> {t.downloadReport}
+          </Button>
           <Button onClick={onRestart} variant="outline" size="lg">
             <RotateCcw className="mr-2 h-4 w-4" /> {t.retake}
           </Button>
