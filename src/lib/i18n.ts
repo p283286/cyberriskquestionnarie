@@ -88,11 +88,11 @@ const en: UI = {
   heroTitle1: "Is Your Business",
   heroTitle2: "Exposed?",
   heroDesc:
-    "A 28-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
+    "A 43-question self-assessment to gauge your organization's data vulnerability. Built for non-technical executives. Confidential. Takes about 5 minutes.",
   start: "Start the Assessment",
   features: [
     { title: "Confidential", desc: "Nothing is sent or stored. Your answers stay in your browser." },
-    { title: "Honest scoring", desc: "Out of 140 points across 5 critical domains." },
+    { title: "Honest scoring", desc: "Out of 215 points across 6 critical domains." },
     { title: "Actionable", desc: "Get tailored recommendations based on your posture." },
   ],
   back: "Back",
@@ -318,7 +318,7 @@ const zh: UI = {
   start: "开始评估",
   features: [
     { title: "保密", desc: "数据不会发送或存储。您的答案仅保留在您的浏览器中。" },
-    { title: "客观评分", desc: "5 个关键领域共 140 分。" },
+    { title: "客观评分", desc: "6 个关键领域共 215 分。" },
     { title: "可行建议", desc: "根据您的安全态势获取量身定制的建议。" },
   ],
   back: "上一题",
@@ -513,7 +513,7 @@ const ja: UI = {
   start: "アセスメントを開始",
   features: [
     { title: "機密性", desc: "データは送信も保存もされません。回答はブラウザ内に留まります。" },
-    { title: "公正な採点", desc: "5つの重要領域、合計140点。" },
+    { title: "公正な採点", desc: "6つの重要領域、合計215点。" },
     { title: "実行可能な助言", desc: "セキュリティ態勢に応じた具体的な推奨事項を提供。" },
   ],
   back: "戻る",
