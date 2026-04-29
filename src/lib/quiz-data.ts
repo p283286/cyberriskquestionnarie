@@ -412,7 +412,7 @@ export const allQuestions: Question[] = sections.flatMap((s) =>
 );
 
 export function getResultTier(score: number) {
-  if (score < 75) {
+  if (score < 115) {
     return {
       tier: "Attention Required",
       level: "high-risk",
