@@ -2,7 +2,7 @@ export type Option = { label: string; value: number };
 export type Question = { id: string; text: string; options: Option[] };
 export type Section = { title: string; questions: Question[] };
 
-export const TOTAL_POINTS = 140;
+export const TOTAL_POINTS = 215;
 
 export const sections: Section[] = [
   {
