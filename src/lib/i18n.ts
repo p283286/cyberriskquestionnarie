@@ -23,6 +23,9 @@ type UI = {
   recommendedActions: string;
   detailedRecommendations: string;
   retake: string;
+  downloadReport: string;
+  reportTitle: string;
+  reportGenerated: string;
   disclaimer: string;
   language: string;
   sectionTitles: Record<string, string>;
