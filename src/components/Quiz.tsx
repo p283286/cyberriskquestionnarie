@@ -325,6 +325,17 @@ function Result({
           <p className="text-xs text-muted-foreground mt-5">{t.securliContact}</p>
         </div>
 
+        <div className="rounded-2xl border border-primary/30 bg-primary/5 p-6 md:p-8 mb-8 text-center">
+          <h3 className="font-display text-xl font-semibold mb-2">{t.contactCtaTitle}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">{t.contactCtaBody}</p>
+          <a
+            href="mailto:info@10gtechnology.com"
+            className="inline-block mt-4 font-semibold text-primary hover:underline"
+          >
+            info@10gtechnology.com
+          </a>
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button
             onClick={() => generateReport(score, answers)}
