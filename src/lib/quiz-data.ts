@@ -426,7 +426,7 @@ export function getResultTier(score: number) {
       ],
     };
   }
-  if (score <= 112) {
+  if (score <= 172) {
     return {
       tier: "Room for Improvement",
       level: "moderate",
