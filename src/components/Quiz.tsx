@@ -2,7 +2,8 @@ import { useMemo, useState } from "react";
 import { allQuestions, getResultTier, sections, TOTAL_POINTS } from "@/lib/quiz-data";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { ShieldCheck, ShieldAlert, ShieldHalf, ArrowRight, ArrowLeft, RotateCcw, Lock, Globe } from "lucide-react";
+import { ShieldCheck, ShieldAlert, ShieldHalf, ArrowRight, ArrowLeft, RotateCcw, Lock, Globe, Download } from "lucide-react";
+import { generateReport } from "@/lib/pdf-report";
 import { cn } from "@/lib/utils";
 import { I18nContext, LANGS, Lang, translations, useI18n } from "@/lib/i18n";
 
