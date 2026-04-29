@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Cyber Risk Questionnarie" },
+      { name: "description", content: "Cyber Risk Questionnarie" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Cyber Risk Questionnarie" },
+      { property: "og:description", content: "Cyber Risk Questionnarie" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Cyber Risk Questionnarie" },
+      { name: "twitter:description", content: "Cyber Risk Questionnarie" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1e7dbc47-b40a-4f92-b161-eaf12fc6ac75/id-preview-d750f909--83d74f08-46f6-4e29-afd4-310b9f20d50a.lovable.app-1777449602742.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1e7dbc47-b40a-4f92-b161-eaf12fc6ac75/id-preview-d750f909--83d74f08-46f6-4e29-afd4-310b9f20d50a.lovable.app-1777449602742.png" },
     ],
     links: [
       {
