@@ -82,6 +82,9 @@ const en: UI = {
   recommendedActions: "Recommended Actions",
   detailedRecommendations: "Detailed Recommendations",
   retake: "Retake Assessment",
+  downloadReport: "Download PDF Report",
+  reportTitle: "Cyber Risk Assessment Report",
+  reportGenerated: "Generated",
   disclaimer:
     "Disclaimer: This information is for general awareness only and does not constitute professional security advice. Consult with qualified professionals for tailored recommendations.",
   language: "Language",
