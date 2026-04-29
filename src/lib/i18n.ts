@@ -115,6 +115,7 @@ const en: UI = {
     "Technical & Physical": "Technical & Physical",
     "Assessments & Testing": "Assessments & Testing",
     "Communications & Training": "Communications & Training",
+    "Security Awareness & Practices": "Security Awareness & Practices",
   },
   optionLabels: optionKeys,
   questions: {
@@ -144,7 +145,43 @@ const en: UI = {
     c2: "Are you offering ongoing employee information security training to ALL employees?",
     c3: "Does your board of directors (or senior management) receive information on cybersecurity risk?",
     c4: "Does your board (or senior management) understand and agree that the measures in place to address risk are in line with your risk appetite?",
+    s1: "Do you understand the cybersecurity policies and requirements set by the Hong Kong government for various industries?",
+    s2: "Are you aware of any cybersecurity standards?",
+    s3: "How many of these security frameworks/standards have you heard of? (NIST, CIS, PCI-DSS, GDPR, ISO/IEC 27001, HIPAA, FISMA)",
+    s4: "Do you encounter suspicious network activity, phishing emails, or security risks at work?",
+    s5: "Does your company have a firewall in place?",
+    s6: "Is the firewall configuration adequate?",
+    s7: "Does your company use a DNS Firewall?",
+    s8: "Are computer operating systems updated regularly?",
+    s9: "Are software and system patches applied regularly?",
+    s10: "Is anti-virus software installed and run for regular scans?",
+    s11: "Do you use a SIEM to monitor internal network security information?",
+    s12: "Do you regularly conduct Penetration Testing?",
+    s13: "Do you perform security scanning and configuration based on CIS standards?",
+    s14: "Do you regularly conduct staff security awareness education?",
+    s15: "Do you think your company's current cybersecurity protection measures are sufficient?",
   },
+  securliTitle: "Expert Recommendations",
+  securliIntro: "Regardless of your score, these are the foundational practices every organization should adopt to improve cyber resilience:",
+  securliContact: "Interested in these services? Email info@securli.com",
+  securliRecs: [
+    {
+      title: "Conduct Penetration Testing at least once a year",
+      body: "Penetration Testing simulates a real attacker who has gained access to your environment, revealing what damage could be done so you can patch the gaps. This is NOT the same as vulnerability scanning — only penetration testing uncovers true exploitable weaknesses inside your organization.",
+    },
+    {
+      title: "Conduct a Configuration Assessment at least once a year",
+      body: "A Configuration Assessment evaluates whether your systems and devices are configured according to security baselines. It collects detailed configuration data, compares it against industry standards, identifies risks, and produces a remediation plan — a critical step toward effective cyber risk management.",
+    },
+    {
+      title: "Run Staff Awareness Education at least once a year",
+      body: "Staff Awareness Education trains employees to recognize and respond to cyber threats. It covers common attack techniques, safe handling of sensitive data, strong password practices, and phishing recognition — reducing the risk of human error, which is one of the leading causes of breaches.",
+    },
+    {
+      title: "Use a DNS Firewall to control employee web activity",
+      body: "A DNS Firewall blocks known malicious domains and IP addresses, defends against emerging threats with dynamic blocklists, restricts non-work-related sites, logs network activity for auditing, and reduces your external attack surface — improving overall cybersecurity posture.",
+    },
+  ],
   tiers: {
     "high-risk": {
       tier: "Attention Required",
