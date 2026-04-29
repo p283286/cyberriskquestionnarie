@@ -412,6 +412,9 @@ const ja: UI = {
   recommendedActions: "推奨アクション",
   detailedRecommendations: "詳細な推奨事項",
   retake: "もう一度受ける",
+  downloadReport: "PDFレポートをダウンロード",
+  reportTitle: "サイバーリスク評価レポート",
+  reportGenerated: "生成日時",
   disclaimer:
     "免責事項:本情報は一般的な認識のためのみであり、専門的なセキュリティ助言を構成するものではありません。個別の推奨事項については資格のある専門家にご相談ください。",
   language: "言語",
