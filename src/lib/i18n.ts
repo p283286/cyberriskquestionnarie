@@ -64,6 +64,23 @@ const optionKeys = {
   Average: "Average",
   "Not Very": "Not Very",
   "Not at all": "Not at all",
+  "Fully understand": "Fully understand",
+  "Basic understanding": "Basic understanding",
+  "Limited understanding": "Limited understanding",
+  "No understanding": "No understanding",
+  "All or most": "All or most",
+  "A few": "A few",
+  None: "None",
+  "Often (and recognize them)": "Often (and recognize them)",
+  Occasionally: "Occasionally",
+  Rarely: "Rarely",
+  Never: "Never",
+  Adequate: "Adequate",
+  "Needs improvement": "Needs improvement",
+  "Very sufficient": "Very sufficient",
+  "Basically sufficient": "Basically sufficient",
+  "Needs strengthening": "Needs strengthening",
+  "Very insufficient": "Very insufficient",
 };
 
 const en: UI = {
