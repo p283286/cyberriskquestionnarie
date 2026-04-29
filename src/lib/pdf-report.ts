@@ -148,6 +148,29 @@ export function generateReport(score: number, answers: Record<string, number>) {
     y += 4;
   });
 
+  // Contact CTA box
+  ensureSpace(80);
+  y += 6;
+  doc.setFillColor(235, 242, 255);
+  doc.roundedRect(margin, y, maxW, 70, 8, 8, "F");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(13);
+  doc.setTextColor(20, 30, 60);
+  doc.text("Need More Help?", margin + 16, y + 22);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10.5);
+  doc.setTextColor(60, 60, 60);
+  const ctaLines = doc.splitTextToSize(
+    "For more cyber security services or information, please contact us at info@10gtechnology.com — our team is happy to help.",
+    maxW - 32
+  ) as string[];
+  let cy = y + 40;
+  for (const l of ctaLines) {
+    doc.text(l, margin + 16, cy);
+    cy += 13;
+  }
+  y += 80;
+
   // Footer disclaimer on last page
   ensureSpace(40);
   y += 10;
